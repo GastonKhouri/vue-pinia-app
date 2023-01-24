@@ -26,7 +26,7 @@ export const useClients = () => {
 	watch( data, clients => {
 		if ( !clients ) return;
 		store.setClients( clients );
-	} );
+	}, { immediate: true } );
 
 	const changePage = ( page: number ) => {
 		store.setPage( page );
